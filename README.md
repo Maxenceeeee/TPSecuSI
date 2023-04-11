@@ -7,3 +7,5 @@ La seconde page est la page "Log in", elle demande à l'utilisateur de rentrer s
 sont conformes à ceux stockés dans la table "identifiants" de secu_si.
 
 Il existe un log in de test déjà présent dans la base de données, l'adresse mail est test@test.com et le mdp est test123.
+
+Les mots de passe sont chiffrés à l'aide de la méthode Hash de PHP
