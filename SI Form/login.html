@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <title>Sign in</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <div class="carre">
+    <div class="formulaire">
+      <form action="page_traitement_login.php" onsubmit="return fonction()" method="post">
+        <h1 >Se connecter</h1>
+        <br>
+        <label class="label" id="label_mail">Adresse Mail</label>
+        <br>
+        <input class="input_text" name="mail" type="email" autocomplete="off" id="mail">
+        <br>
+        <br>
+        <label class="label" id="label_password">Mot de passe</label>
+        <br>
+        <input class="input_text" name="password" type="password" autocomplete="off" id="password">
+        <br>
+        <br>
+        <button class="btn" type="submit">Valider</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
