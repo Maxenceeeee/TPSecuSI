@@ -31,6 +31,7 @@ DROP TABLE IF EXISTS `articles`;
 CREATE TABLE IF NOT EXISTS `articles` (
   `idArticle` bigint NOT NULL AUTO_INCREMENT,
   `idAuteur` bigint NOT NULL,
+  `titre` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `sujet` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`idArticle`),
   KEY `idAuteur` (`idAuteur`)
