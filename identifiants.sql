@@ -24,6 +24,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `articles`
+--
+
+DROP TABLE IF EXISTS `articles`;
+CREATE TABLE IF NOT EXISTS `articles` (
+  `idArticle` bigint NOT NULL AUTO_INCREMENT,
+  `idAuteur` bigint NOT NULL,
+  `sujet` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`idArticle`),
+  KEY `idAuteur` (`idAuteur`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `identifiants`
 --
 
