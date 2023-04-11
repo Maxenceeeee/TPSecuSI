@@ -31,7 +31,7 @@ DROP TABLE IF EXISTS `identifiants`;
 CREATE TABLE IF NOT EXISTS `identifiants` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `adresseMail` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `motDePasse` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `motDePasse` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `nom` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `prenom` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `dateNaissance` date NOT NULL,
