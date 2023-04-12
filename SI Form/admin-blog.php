@@ -39,7 +39,7 @@ session_start();
     </div>
     <div class="blog">
       <div class="titre">
-        <h1>Vos blogs s'affichent ici (pas focntionnel)</h1>
+        <h1>Vos blog s'affiche ici (pas focntionnel)</h1>
       </div>
     </div>
   </section>

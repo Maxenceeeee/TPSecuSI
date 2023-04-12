@@ -13,23 +13,36 @@ session_start();
 <body>
 
     <?php
-    $nom = $_REQUEST['nom'];
+    if(isset($_POST["captcha"])&&$_POST["captcha"]!=""&&$_SESSION["code"]==$_POST["captcha"])
+    {
+        $nom = $_REQUEST['nom'];
     $prenom = $_REQUEST['prenom'];
     $mail = $_REQUEST["mail"];
     $password = $_REQUEST["password"];
     $date = $_REQUEST["date"];
     $hashed_password = hash('sha256', $password);
 
-    $dbname = "secu_si";
+     if(filter_var($mail, FILTER_VALIDATE_EMAIL)){
+        $dbname = "secu_si";
     $dbuser = "root";
     $dbpass = "";
     $dbip = "localhost";
 
     $bdd = new PDO("mysql:host=" . $dbip . ";dbname=" . $dbname . ";charset=utf8", $dbuser, $dbpass);
     $formulaire = $bdd->query('INSERT INTO identifiants (adresseMail, motDePasse, nom, prenom, dateNaissance) VALUES ("' . $mail . '","' . $hashed_password . '","' . $nom . '","' . $prenom . '","' . $date . '")');
-    
+
     $_SESSION['mail'] = $mail;
     header('Location: index.php');
+
+      } else {
+        header('Location: sign-in.php');
+      }
+
+
+
+    }else{
+        header('Location: sign-in.php');
+    }
 
     ?>
 

@@ -10,7 +10,7 @@
             echo '<a href="admin-blog.php?id='.$_SESSION["mail"].'" class="link-account"><i class="fa-solid fa-user"></i></a>';
         } else {
             echo '<a href="login.html" class="link-account">Connexion</a>';
-            echo '<a href="sign-in.html" class="link-account">Créer un compte</a>';
+            echo '<a href="sign-in.php" class="link-account">Créer un compte</a>';
         }
         ?>
     </div>
