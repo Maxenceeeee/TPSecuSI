@@ -19,4 +19,6 @@ ou en les supprimant.
 
 Il existe un log in de test déjà présent dans la base de données, l'adresse mail est test@test.com et le mdp est test123.
 
-Les mots de passe sont chiffrés à l'aide de la méthode Hash de PHP
+Les mots de passe sont chiffrés à l'aide de la méthode Hash de PHP.
+
+La création de compte est protégée à l'aide d'un Captcha, empêchant ainsi les comptes automatiques.
