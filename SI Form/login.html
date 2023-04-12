@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Sign in</title>
+  <title>Login</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -10,7 +10,7 @@
   <div class="carre">
     <div class="formulaire">
       <form action="page_traitement_login.php" onsubmit="return fonction()" method="post">
-        <h1 >Se connecter</h1>
+        <h1 class="form-title">Se connecter</h1>
         <br>
         <label class="label" id="label_mail">Adresse Mail</label>
         <br>
@@ -25,6 +25,10 @@
         <button class="btn" type="submit">Valider</button>
       </form>
     </div>
+  </div>
+  <div class="carre">
+    <p>⚠ Ce bouton est destiné à vérifier le fonctionnement de l'anti brute force en supprimant la variable de session comptant le nombre d'essais. Il serait évidemment retiré dans une version officielle</p>
+    <a href="bruteforce.php" class="btn2">Suppr Session</a>
   </div>
 </body>
 

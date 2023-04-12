@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <html>
 
 <head>
@@ -24,7 +28,8 @@
     $bdd = new PDO("mysql:host=" . $dbip . ";dbname=" . $dbname . ";charset=utf8", $dbuser, $dbpass);
     $formulaire = $bdd->query('INSERT INTO identifiants (adresseMail, motDePasse, nom, prenom, dateNaissance) VALUES ("' . $mail . '","' . $hashed_password . '","' . $nom . '","' . $prenom . '","' . $date . '")');
     
-    header('Location: connecte.html');
+    $_SESSION['mail'] = $mail;
+    header('Location: index.php');
 
     ?>
 

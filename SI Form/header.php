@@ -1,12 +1,16 @@
 <header>
-        <nav class="navbar">
-            <a href="index.php">Acceuil</a>
-            <a href="page1.php">Page 1</a>
-            <a href="page2.php">Page 2</a>
-            <a href="page3.php">Page 3</a>
+    <nav class="navbar">
+        <a href="index.php">Accueil</a>
+    </nav>
 
-
-            <a href="login.html" class="link-account">Connexion</a>
-            <a href="sign-in.html" class="link-account">Créer un compte</a>
-        </nav>
-    </header>
+    <div class="account-links">
+        <?php
+        if (isset($_SESSION['mail'])) {
+            echo '<a href="logout.php" class="link-account">Déconnexion</a>';
+        } else {
+            echo '<a href="login.html" class="link-account">Connexion</a>';
+            echo '<a href="sign-in.html" class="link-account">Créer un compte</a>';
+        }
+        ?>
+    </div>
+</header>
