@@ -14,7 +14,8 @@ La troisième page est la page "Log in", elle demande à l'utilisateur de rentre
 identifiants sont conformes à ceux stockés dans la table "identifiants" de secu_si. Si un utilisateur échoue trop de fois à se connecter, son compte sera bloqué
 pendant un moment.
 
-Les utilisateurs connectés ont accès a une page leur permettant de gérer leurs posts, soit en ajoutant de nouveaux blogs soit en en supprimant .
+Les utilisateurs connectés ont accès a une page leur permettant de gérer leurs posts, soit en ajoutant de nouveaux blogs, en modifiant les blogs déjà existants
+ou en les supprimant.
 
 Il existe un log in de test déjà présent dans la base de données, l'adresse mail est test@test.com et le mdp est test123.
 
