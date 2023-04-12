@@ -15,7 +15,6 @@ if (isset($_POST['mail']) && isset($_POST['password']) && !empty($_POST['mail'])
 
 if (isset($_SESSION['login_attempts']) && $_SESSION['login_attempts'] > $max_attempts) {
   // bloquer l'accès au formulaire
-  $_SESSION['last_attempt_time'] = time();
   exit("Vous avez atteint le nombre maximal de tentatives de connexion. Veuillez réessayer plus tard.");
 }
 

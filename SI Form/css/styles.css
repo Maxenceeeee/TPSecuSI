@@ -39,15 +39,22 @@ header a {
     margin-left: 35px;
     color: #000;
     max-width: 1200px;
+    transition: 0.25s;
 }
 
-header a:hover,
-header a.active {
+header a:hover {
+    transition: 0.25s;
     color: #00eeff;
 }
 
+.fa-solid {
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px 0 rgba(88, 70, 108, 0.37);
+}
 
 
+/* LOGIN SIGNIN */
 .carre {
     background: rgb(255, 255, 255);
     margin: 0 auto;
@@ -126,15 +133,15 @@ form {
 }
 
 
-/* INDEX */
-
+/* INDEX & ADMIN PAGE */
 .content {
     justify-content: center;
     display: flex;
     width: 100%;
 }
 
-.index-session {
+.index-session,
+.add-blog {
     margin-top: 80px;
     border-radius: 15px;
     box-shadow: 0 4px 16px 0 rgba(88, 70, 108, 0.37);
@@ -166,18 +173,21 @@ form {
     font-size: 18px;
 }
 
-.bandeau ul {
-    list-style: none;
-    padding: 0;
+.bandeau hr {
+    margin-bottom: 10%;
 }
 
-.bandeau li {
-    margin: 100% 0 100% 0;
-}
-
-.bandeau li a {
+.blog-links {
+    margin: 5% 0 5% 0;
     text-decoration: none;
+    transition: 0.25s;
 }
+
+.blog-links:hover {
+    color: #00eeff;
+    transition: 0.25s;
+}
+
 
 .blog {
     margin-top: 20px;
@@ -210,4 +220,10 @@ form {
     display: block;
     margin: auto;
     text-align: center;
+}
+
+/* ADMIN PAGE */
+
+.add-blog p {
+    margin-left: 10px;
 }
