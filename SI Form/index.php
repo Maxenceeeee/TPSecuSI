@@ -7,9 +7,7 @@ session_start();
 <head>
     <title>Acceuil</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
@@ -40,7 +38,7 @@ session_start();
 
             $listage = $bdd->query('SELECT articles.idArticle AS idar, articles.idAuteur AS idau, articles.titre AS titre, articles.sujet AS sujet FROM articles');
             while ($list = $listage->fetch()) {
-                echo "<a href='index.php?id=".$list['idar']."'class='blog-links'>".$list['titre']."</a>";
+                echo "<a href='blog.php?id=" . $list['idar'] . "'class='blog-links'>" . $list['titre'] . "</a>";
                 echo '<br/>';
             }
             ?>
@@ -84,9 +82,11 @@ session_start();
                     cum
                     consectetur reprehenderit placeat beatae earum laudantium sed! Animi, impedit?
                 </p>
-                
+
                 <img src="https://www.taptouche.com/images/1/3/a/8/4/13a845e178cb05ecc149ffc850ad9a6eac19f85d-lorem-ipsum.png" alt="Lorem ipsum" class="picture">
             </div>
         </div>
     </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
