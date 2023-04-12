@@ -29,7 +29,7 @@ session_start();
 
             $listage = $bdd->query('SELECT articles.idArticle AS idar, articles.idAuteur AS idau, articles.titre AS titre, articles.sujet AS sujet FROM articles');
             while ($list = $listage->fetch()) {
-                echo "<a href='index.php?id=" . $list['idar'] . "'class='blog-links'>" . $list['titre'] . "</a>";
+                echo "<a href='blog.php?id=" . $list['idar'] . "'class='blog-links'>" . $list['titre'] . "</a>";
                 echo '<br/>';
             }
             ?>
