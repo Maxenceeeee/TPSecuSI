@@ -16,7 +16,8 @@ session_start();
   include('header.php');
   ?>
   <div class="add-blog">
-    <a href="addblog.php"><i class="fa-solid fa-plus"></i></a><p>Ajouter un nouveau blog</p>
+    <a href="addblog.php"><i class="fa-solid fa-plus"></i></a>
+    <p> Ajouter un nouveau blog</p>
   </div>
   <section class="content">
     <div class="bandeau">
@@ -30,8 +31,7 @@ session_start();
 
       $listage = $bdd->query('SELECT articles.idArticle AS idar, articles.idAuteur AS idau, articles.titre AS titre, articles.sujet AS sujet FROM articles');
       while ($list = $listage->fetch()) {
-        echo "<a href='index.php?id=" . $list['idar'] . "'class='blog-links'>" . $list['titre'] . "</a>";
-        echo '<br/>';
+        echo "<div class='list'><a class='supp-blog' href='supp-blog.php?id=" . $list['idar'] . "'><ion-icon name='trash-outline'></ion-icon></a><a href='admin-blog.php?id=" . $list['idar'] . "'class='blog-links'>" . $list['titre'] . "</a></div>";
       }
       ?>
     </div>
@@ -80,3 +80,6 @@ session_start();
     </div>
   </section>
   </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>

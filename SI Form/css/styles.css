@@ -227,3 +227,62 @@ form {
 .add-blog p {
     margin-left: 10px;
 }
+
+.supp-blog{
+    padding: 5px;
+    border-radius: 9px;
+    box-shadow: 0 2px 8px 0 rgba(88, 70, 108, 0.37);
+    margin-right: 10px;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.input_textarea{
+    resize: vertical;
+    min-height: 50px;
+    max-height: 75vh;
+    width: 70%;
+    padding: 6px 20px;
+    font-size: 16px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: solid transparent 2px;
+    border: solid 2px rgba(63, 63, 63, 0.18);
+    background-color: transparent;
+    border-radius: 15px;
+    outline: none;
+}
+
+.carre-add {
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 2%;
+    width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(88, 70, 108, 0.37);
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-add {
+    margin-left: 23%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    background-color: rgba(86, 86, 86, 0.2);
+    border: 0px;
+    border-radius: 100px;
+    padding: 3% 6% 3% 6%;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.btn-add:hover {
+    transition: 0.25s;
+    background-color: rgba(170, 170, 170, 0.3);
+}
