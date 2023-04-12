@@ -5,11 +5,16 @@ La base de données secu_si comporte 2 tables. La première est la table "identi
 informations. La deuxième est la table "articles", référencent tout les blogs présent sur le site, ainsi que l'identifiant de leur auteur, leur titre et le sujet
 qu'ils traitent.
 
-La première page est la page "Sign in", elle demande à l'utilisateur de rentrer son nom, prénom, date de naissance, adresse mail et un mot de passe et enregistre
+La première page est la page d'acceuil, elle présente à l'utilisateur les blogs les plus récents et lui offr la possibilité de s'inscrire ou se connecter.
+
+La deuxième page est la page "Sign in", elle demande à l'utilisateur de rentrer son nom, prénom, date de naissance, adresse mail et un mot de passe et enregistre
 ces informations dans la base de données secu_si.
 
-La seconde page est la page "Log in", elle demande à l'utilisateur de rentrer son adresse mail ainsi que son mot de passe et vérifie ensuite que ces identifiants 
-sont conformes à ceux stockés dans la table "identifiants" de secu_si.
+La troisième page est la page "Log in", elle demande à l'utilisateur de rentrer son adresse mail ainsi que son mot de passe et vérifie ensuite que ces
+identifiants sont conformes à ceux stockés dans la table "identifiants" de secu_si. Si un utilisateur échoue trop de fois à se connecter, son compte sera bloqué
+pendant un moment.
+
+Les utilisateurs connectés ont accès a une page leur permettant de gérer leurs posts, soit en ajoutant de nouveaux blogs soit en en supprimant .
 
 Il existe un log in de test déjà présent dans la base de données, l'adresse mail est test@test.com et le mdp est test123.
 
