@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `idAuteur` bigint NOT NULL,
   `titre` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `sujet` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `contenu` varchar(5000) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`idArticle`),
   KEY `idAuteur` (`idAuteur`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
