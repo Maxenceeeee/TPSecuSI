@@ -60,9 +60,7 @@ CREATE TABLE IF NOT EXISTS `identifiants` (
 --
 
 INSERT INTO `identifiants` (`id`, `adresseMail`, `motDePasse`, `nom`, `prenom`, `dateNaissance`) VALUES
-(1, 'maxence.per@aliceadsl.fr', 'Max-23012003', 'Frappier', 'Maxence', '2003-01-23'),
-(2, 'mattisdasilva03@gmail.com', 'azerty', 'DA SILVA', 'Mattis', '2003-07-11'),
-(3, 'test@test.com', 'test123', 'Nom_Test', 'Prénom_test', '2000-01-01');
+(1, 'test@test.com', 'test123', 'Nom_Test', 'Prénom_test', '2000-01-01');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
