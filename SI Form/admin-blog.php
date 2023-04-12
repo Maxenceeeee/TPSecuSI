@@ -16,8 +16,7 @@ session_start();
   include('header.php');
   ?>
   <div class="add-blog">
-    <a href="addblog.php"><i class="fa-solid fa-plus"></i></a>
-    <p> Ajouter un nouveau blog</p>
+    <a href="addblog.php"><i class="fa-solid fa-plus"></i></a><p>Ajouter un nouveau blog</p>
   </div>
   <section class="content">
     <div class="bandeau">
@@ -29,9 +28,15 @@ session_start();
       $dbip = "localhost";
       $bdd = new PDO("mysql:host=" . $dbip . ";dbname=" . $dbname . ";charset=utf8", $dbuser);
 
-      $listage = $bdd->query('SELECT articles.idArticle AS idar, articles.idAuteur AS idau, articles.titre AS titre, articles.sujet AS sujet FROM articles');
+      $mail = $_REQUEST['id'];
+      echo $mail;
+      $idd = $bdd->query("SELECT id FROM identifiants WHERE adresseMail = '".$mail."'");
+      $row = $idd->fetch();
+      $id = $row['id'];
+      echo $id;
+      $listage = $bdd->query("SELECT articles.idArticle AS idar, articles.titre AS titre, articles.sujet AS sujet, articles.contenu AS contenu FROM articles WHERE idAuteur = '".$id."' ");
       while ($list = $listage->fetch()) {
-        echo "<div class='list'><a class='supp-blog' href='supp-blog.php?id=" . $list['idar'] . "'><ion-icon name='trash-outline'></ion-icon></a><a href='admin-blog.php?id=" . $list['idar'] . "'class='blog-links'>" . $list['titre'] . "</a></div>";
+        echo "<div class='list'><a class='supp-blog' href='supp-blog.php?id=" . $list['idar'] . "'><ion-icon name='trash-outline'></ion-icon></a><a class='supp-blog' href='modifblog.php?id=" . $list['idar'] . "'><ion-icon name='create-outline'></ion-icon></a><a href='admin-blog.php?id=" . $list['idar'] . "'class='blog-links'>" . $list['titre'] . "</a></div>";
       }
       ?>
     </div>
@@ -80,6 +85,3 @@ session_start();
     </div>
   </section>
   </div>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
